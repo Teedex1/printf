@@ -2,7 +2,7 @@
 
 /**
  * print_s - print a string
- * @args: argument
+ * @arg: argument
  * Return: length of the string
  */
 int print_s(va_list arg)
@@ -12,22 +12,15 @@ int print_s(va_list arg)
 	int len;
 
 	string = va_arg(arg, char *);
-	if (string == NULL) {
+	if (string == NULL)
+	{
 		string = "(NULL)";
 		len = _strlen(string);
 		for (i = 0; i < len; i++)
 			_putchar(string[i]);
 	}
-	
-	/*i = 0;
-
-	while (i < len)
-
+	else
 	{
-		_putchar(string[i]);
-		i++;
-	}*/
-	else {
 		len = _strlen(string);
 		for (i = 0; i < len; i++)
 			_putchar(string[i]);

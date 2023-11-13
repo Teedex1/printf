@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	{
 		/*if (format[i] != '\0')*/
 		size_t z = 0;
-		
+
 		while (z < sizeof(f) / sizeof(f[0]))
 		{
 			if (f[z].any_char[0] == format[i] && f[z].any_char[1] == format[i + 1])
