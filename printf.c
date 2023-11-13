@@ -11,8 +11,8 @@ int _printf(const char *format, ...)
 	format_info f[] = {
 		{"%c", print_char_c},
 		{"%s", print_s},
-		{"%%", print_percentage_sign}
-		{"%i", print_int_i}
+		{"%%", print_percentage_sign},
+		{"%d", print_int_i}
 	};
 
 	va_list args;
