@@ -28,17 +28,10 @@ int print_int_i(va_list args)
 
 	if (num != 0)
 	{
-
-	/*if (num > 0)*/
-		/*int divisor = 1;*/
-
 		while (num / divisor >= 10)
 			divisor = divisor * 10;
-
-		/*num = n;*/
-		/*if (divisor != 0)*/
-
-			while (divisor > 0)
+		
+		while (divisor > 0)
 			{
 				digit = num / divisor;
 				_putchar(digit + '0');
