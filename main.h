@@ -18,6 +18,7 @@ int print_s(va_list arg);
 int _strlen(char *string);
 int _strlen_const(const char *string);
 int print_percentage_sign(va_list args);
+int print_int_i(va_list arg);
 
 
 #endif
