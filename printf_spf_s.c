@@ -5,28 +5,32 @@
  * @args: argument
  * Return: length of the string
  */
-int print_s(va_list args)
+int print_s(va_list arg)
 {
 	char *string;
 	int i;
 	int len;
 
-	string = va_arg(args, char *);
-	if (string == NULL)
-	{
+	string = va_arg(arg, char *);
+	if (string == NULL) {
 		string = "(NULL)";
 		len = _strlen(string);
 		for (i = 0; i < len; i++)
 			_putchar(string[i]);
 	}
-
-	i = 0;
+	
+	/*i = 0;
 
 	while (i < len)
 
 	{
 		_putchar(string[i]);
 		i++;
+	}*/
+	else {
+		len = _strlen(string);
+		for (i = 0; i < len; i++)
+			_putchar(string[i]);
 	}
 	return (len);
 }

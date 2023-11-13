@@ -14,10 +14,10 @@ typedef struct specifierInfo
 int _putchar(char c);
 int print_char_c(va_list char_args);
 int _printf(const char *format, ...);
-int print_s(va_list args);
+int print_s(va_list arg);
 int _strlen(char *string);
 int _strlen_const(const char *string);
-int print_percentage_sign(void);
+int print_percentage_sign(va_list args);
 
 
 #endif

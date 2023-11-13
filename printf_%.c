@@ -3,8 +3,10 @@
  * print_percentage_sign - to print percentage
  * Return: int
  */
-int print_percentage_sign(void)
+int print_percentage_sign(va_list args)
 {
-	_putchar('%');
+	(void)args;
+
+	_putchar(37);
 	return (1);
 }
