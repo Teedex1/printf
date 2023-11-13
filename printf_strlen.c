@@ -7,16 +7,14 @@
 int _strlen(char *string)
 {
 	int i;
-	
-	do
-	{
+
+	do {
 		i++;
-	}
-	while (string[i] != '\0');
+	} while (string[i] != '\0');
 	return (i);
 }
 /**
- * _strlen - strlen function for constant char pointer string
+ * _strlen_const - strlen function for constant char pointer string
  * @string: char pointer
  * Return: 1
  */
@@ -24,10 +22,8 @@ int _strlen_const(const char *string)
 {
 	int i;
 
-	do
-	{
+	do {
 		i++;
-	}
-	while (string[i] != '\0');
-	return(i);
+	} while (string[i] != '\0');
+	return (i);
 }

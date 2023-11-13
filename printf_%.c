@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_% - to print percentage
+ * print_percentage_sign - to print percentage
  * Return: int
  */
 int print_percentage_sign(void)

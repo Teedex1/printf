@@ -19,9 +19,9 @@ int print_s(va_list args)
 		for (i = 0; i < len; i++)
 			_putchar(string[i]);
 	}
-	
+
 	i = 0;
-	
+
 	while (i < len)
 
 	{
@@ -30,4 +30,3 @@ int print_s(va_list args)
 	}
 	return (len);
 }
-					
