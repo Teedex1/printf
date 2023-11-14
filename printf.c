@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"%d", print_int_i},
 		{"%i", print_int_d},
 		{"%b", print_binary},
+		{"%u", print_int_unsigned},
 	};
 
 	va_list args;
