@@ -6,7 +6,7 @@
  */
 int _strlen(char *string)
 {
-	int i;
+	int i = 0;
 
 	do {
 		i++;
@@ -20,7 +20,7 @@ int _strlen(char *string)
  */
 int _strlen_const(const char *string)
 {
-	int i;
+	int i = 0;
 
 	do {
 		i++;
