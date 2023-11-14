@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 		{"%%", print_percentage_sign},
 		{"%d", print_int_i},
 		{"%i", print_int_d},
-		{"%d", print_binary}
+		{"%b", print_binary},
 	};
 
 	va_list args;

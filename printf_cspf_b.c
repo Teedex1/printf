@@ -16,15 +16,11 @@ int print_binary(va_list args)
 	int bit;
 	for (i = 31; i >= 0; i--)
 	{
-		/*x = ((z << (32 - i)) & digit);*/
-		/*if (x >> (31 - i))*/
-			/*va1 = 1;*/
 		mask = 1u << i;
 		bit = (value & mask) ? 1 : 0;
 
 		if (bit || is_start)
 		{
-			/*j = x >> (31 -i);*/
 			_putchar(bit + '0');
 			num_digits++;
 			is_start = 1;

@@ -15,7 +15,7 @@ int print_int_d(va_list args)
 	{
 		_putchar('_');
 		num = -n;
-		last = -n % 10;
+		last = -last;
 		i++;
 	}
 	else
@@ -25,7 +25,7 @@ int print_int_d(va_list args)
 
 	if (num != 0)
 	{
-		while (num / divisor >= 10)
+		while (divisor > 0 && num / divisor >= 10)
 			divisor = divisor * 10;
 
 		while (divisor > 0)
