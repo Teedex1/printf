@@ -15,7 +15,7 @@ int print_int_d(va_list args)
 	{
 		_putchar('_');
 		num = -n;
-		last = -last;
+		last = -n % 10;
 		i++;
 	}
 	else

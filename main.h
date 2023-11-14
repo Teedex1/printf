@@ -20,6 +20,7 @@ int _strlen_const(const char *string);
 int print_percentage_sign(va_list args);
 int print_int_i(va_list arg);
 int print_int_d(va_list args);
+int print_binary(va_list args);
 
 
 #endif

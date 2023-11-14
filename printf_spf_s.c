@@ -15,15 +15,16 @@ int print_s(va_list arg)
 	if (string == NULL)
 	{
 		string = "(NULL)";
-		len = _strlen(string);
-		for (i = 0; i < len; i++)
-			_putchar(string[i]);
 	}
-	else
-	{
-		len = _strlen(string);
-		for (i = 0; i < len; i++)
-			_putchar(string[i]);
-	}
+	len = _strlen(string);
+	
+	for (i = 0; i < len; i++)
+		_putchar(string[i]);
+
+	/*else*/
+	/*{*/
+	/*	len = _strlen(string);*/
+		/*for (i = 0; i < len; i++)*/
+		/*	_putchar(string[i]);*/
 	return (len);
 }
