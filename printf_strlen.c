@@ -6,13 +6,18 @@
  */
 int _strlen(char *string)
 {
-	int i = 0;
+	int length;
 
-	do {
-		i++;
-	} while (string[i] != '\0');
-	return (i);
+	for (length = 0; string[length] != '\0'; length++)
+		;
+	return (length);
 }
+
+	/*while (string[i] != '\0')*/
+	/*{*/
+	/*	i++;*/
+	/*}*/
+	/*return (i);*/
 /**
  * _strlen_const - strlen function for constant char pointer string
  * @string: char pointer
@@ -20,10 +25,12 @@ int _strlen(char *string)
  */
 int _strlen_const(const char *string)
 {
-	int i = 0;
+	int length;
 
-	do {
-		i++;
-	} while (string[i] != '\0');
-	return (i);
+	for (length = 0; string[length] != '\0'; length++)
+		;
+	return (length);
 }
+
+	/*while (string[i] != '\0')*/
+	/* {i++; }*/

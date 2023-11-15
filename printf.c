@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	{"%c", print_char_c}, {"%s", print_s}, {"%%", print_percentage_sign},
 	{"%d", print_int_i}, {"%i", print_int_d}, {"%b", print_binary},
 	{"%u", print_int_unsigned}, {"%o", print_octa},
-	{"%X", print_X}, {"%x", print_x}, {"%S", Print_S}, {"%p", print_p}
+	{"%X", print_X}, {"%x", print_x}, {"%S", Print_S}, {"%p", print_p},
 	};
 	va_list args;
 	int i = 0, length = 0;

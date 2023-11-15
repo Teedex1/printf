@@ -6,39 +6,29 @@
  */
 int print_int_unsigned(va_list args)
 {
-	int n = va_arg(args, int);
-	int num, last = n % 10, digit;
-	int i = 1;
-	int divisor = 1;
+	unsigned int num = va_arg(args, unsigned int);
+	/*unsigned int last = num % 10;*/
+	int i = 0;
+	unsigned int divisor = 1;
 
-	if (last < 0)
+	if (num == 0)
 	{
-		_putchar('_');
-		num = -n;
-		last = -last;
-		i++;
+		_putchar('0');
+		return (1);
 	}
-	else
-	{
-		num = n;
-	}
-
-	if (num != 0)
-	{
-		while (divisor > 0 && num / divisor >= 10)
-			divisor = divisor * 10;
-
-		while (divisor > 0)
+	
+	while (divisor <= num / 10)
+		
+		divisor = divisor * 10;
+	
+	while (divisor > 0)
 		{
-			digit = num / divisor;
-			_putchar(digit + '0');
+			_putchar((num / divisor) + '0');
 			num = num % divisor;
 			divisor = divisor / 10;
 			i++;
 		}
-	}
 
-	_putchar(last + '0');
 
 	return (i);
 }

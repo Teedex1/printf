@@ -7,57 +7,17 @@
 int print_int_d(va_list args)
 {
 	int n = va_arg(args, int);
-	int num, last = n % 10, digit;
+	int num;
+	int digit;
+	/*last = n % 10, digit;*/
 	int i = 1;
 	int divisor = 1;
 
-	if (last < 0)
+	if (n < 0)
 	{
-		_putchar('_');
+		_putchar('-');
 		num = -n;
-		last = -last;
-		i++;
-	}
-	else
-	{
-		num = n;
-	}
-
-	while (num / divisor >= 10)
-	{
-		divisor = divisor * 10;
-	}
-	while (divisor > 0)
-	{
-		digit = num / divisor;
-		_putchar(digit + '0');
-		num = num % divisor;
-		divisor = divisor / 10;
-		i++;
-	}
-
-	_putchar(last + '0');
-
-	return (i);
-}
-
-/**
- * print_int_i - prints integer i
- * @args: argument to print
- * Return: num of char
- */
-int print_int_i(va_list args)
-{
-	int n = va_arg(args, int);
-	int num, last = n % 10, digit;
-	int i = 1;
-	int divisor = 1;
-
-	if (last < 0)
-	{
-		_putchar('_');
-		num = -n;
-		last = -n % 10;
+		/*last = -n % 10;*/
 		i++;
 	}
 	else
@@ -79,6 +39,48 @@ int print_int_i(va_list args)
 			i++;
 		}
 	}
-	_putchar(last + '0');
+
+	return (i);
+}
+
+/**
+ * print_int_i - prints integer i
+ * @args: argument to print
+ * Return: num of char
+ */
+int print_int_i(va_list args)
+{
+	int n = va_arg(args, int);
+	int num;
+	int digit;
+	int i = 1;
+	int divisor = 1;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		num = -n;
+		i++;
+	}
+	else
+	{
+		num = n;
+	}
+
+	if (num != 0)
+	{
+		while (num / divisor >= 10)
+			divisor = divisor * 10;
+
+		while (divisor > 0)
+		{
+			digit = num / divisor;
+			_putchar(digit + '0');
+			num = num % divisor;
+			divisor = divisor / 10;
+			i++;
+		}
+	}
+
 	return (i);
 }
