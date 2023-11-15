@@ -9,7 +9,7 @@
 typedef struct specifierInfo
 {
 	char *any_char;
-	int (*f)();
+	int (*f)(va_list);
 } format_info;
 int _putchar(char c);
 int print_char_c(va_list char_args);

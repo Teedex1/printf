@@ -2,7 +2,7 @@
 /**
  * _strlen - Return the length of the string
  * @string: string
- * Return: 1
+ * Return: length
  */
 int _strlen(char *string)
 {
@@ -21,7 +21,7 @@ int _strlen(char *string)
 /**
  * _strlen_const - strlen function for constant char pointer string
  * @string: char pointer
- * Return: 1
+ * Return: length
  */
 int _strlen_const(const char *string)
 {
