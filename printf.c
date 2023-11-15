@@ -5,30 +5,23 @@
  *
  * Return: 1
  */
-
 int _printf(const char *format, ...)
 {
 	format_info f[] = {
-		{"%c", print_char_c},
-		{"%s", print_s},
-		{"%%", print_percentage_sign},
-		{"%d", print_int_i},
-		{"%i", print_int_d},
-		{"%b", print_binary},
-		{"%u", print_int_unsigned},
+	{"%c", print_char_c}, {"%s", print_s}, {"%%", print_percentage_sign},
+	{"%d", print_int_i}, {"%i", print_int_d}, {"%b", print_binary},
+	{"%u", print_int_unsigned}, {"%o", print_octa},
+	{"%X", print_X}, {"%x", print_x}, {"%S", Print_S}, {"%p", print_p}
 	};
-
 	va_list args;
 	int i = 0, length = 0;
 
 	va_start(args, format);
-
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	while (format[i] != '\0')
 	{
-		/*if (format[i] != '\0')*/
 		size_t z = 0;
 
 		while (z < sizeof(f) / sizeof(f[0]))
@@ -48,8 +41,6 @@ int _printf(const char *format, ...)
 				length++;
 			}
 		}
-
-
 	va_end(args);
 	return (length);
 }

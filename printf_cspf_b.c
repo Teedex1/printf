@@ -12,8 +12,8 @@ int print_binary(va_list args)
 	int i;
 	unsigned int value = va_arg(args, unsigned int);
 	unsigned int mask;
-
 	int bit;
+
 	for (i = 31; i >= 0; i--)
 	{
 		mask = 1u << i;

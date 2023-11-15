@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_int_d - prints integer i
+ * print_int_unsigned - prints integer i
  * @args: argument to print
  * Return: num of char
  */
