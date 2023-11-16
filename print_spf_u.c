@@ -7,7 +7,6 @@
 int print_int_unsigned(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	/*unsigned int last = num % 10;*/
 	int length = 0;
 	unsigned int divisor = 1;
 
