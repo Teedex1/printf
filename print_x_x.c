@@ -8,6 +8,8 @@ int print_x_x(unsigned long int num)
 {
 	long int digit = 0;
 	unsigned long int rem;
+	char buffer[20];
+	int i;
 
 	if (num == 0)
 	{
@@ -19,12 +21,15 @@ int print_x_x(unsigned long int num)
 		rem = num % 16;
 
 		if (rem < 10)
-			_putchar(rem + '0');
+			buffer[digit++] = rem + '0';
 		else
-			_putchar(rem + 'a' - 10);
+			buffer[digit++] = rem + 'a' - 10;
 
 		num = num / 16;
-		digit++;
 	}
+
+	for (i = digit - 1; i >= 0; --i)
+		_putchar(buffer[i]);
+
 	return (digit);
 }

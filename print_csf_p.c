@@ -9,7 +9,7 @@ int print_p(va_list args)
 	void *p;
 	char *s = "(nil)";
 	int i = 0, z = 0;
-	long int j;
+	unsigned long int j;
 
 	p = va_arg(args, void*);
 
