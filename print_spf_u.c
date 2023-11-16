@@ -8,7 +8,7 @@ int print_int_unsigned(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	/*unsigned int last = num % 10;*/
-	int i = 0;
+	int length = 0;
 	unsigned int divisor = 1;
 
 	if (num == 0)
@@ -16,19 +16,18 @@ int print_int_unsigned(va_list args)
 		_putchar('0');
 		return (1);
 	}
-	
+
 	while (divisor <= num / 10)
-		
+
 		divisor = divisor * 10;
-	
+
 	while (divisor > 0)
-		{
-			_putchar((num / divisor) + '0');
-			num = num % divisor;
-			divisor = divisor / 10;
-			i++;
-		}
+	{
+		_putchar((num / divisor) + '0');
+		num = num % divisor;
+		divisor = divisor / 10;
+		length++;
+	}
 
-
-	return (i);
+	return (length);
 }
